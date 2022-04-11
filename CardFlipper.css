@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#card-section {
+    position: absolute;
+    perspective: 1000px;
+    left: 20%;
+    top: 100px;
+    outline: solid 2px darkblue;
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-gap: 20px;
+    perspective: 1000px;
+}
+
+.buttons,
+.images {
+    position: absolute;
+    height: 100px;
+    width: 150px;
+    background-color: red;
+    backface-visibility: hidden;
+    transition-duration: 1s;
+}
+
+.images {
+    transform: rotateY(180deg);
+}
+
+.cards {
+    position: relative;
+    transform-style: preserve-3d;
+    height: 100px;
+    width: 150px;
+    outline: solid green 2px;
+    backface-visibility: hidden;
+}
+
+.cards-flip {
+    /*class not attached to any HTML tag*/
+    transform: rotateY(180deg);
+    transition-duration: 1s;
+}
